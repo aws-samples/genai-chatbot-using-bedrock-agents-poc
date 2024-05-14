@@ -1,0 +1,64 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Password Reset API", 
+    "description": "API to reset the user password and generate a temporary password",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/reset": {
+      "post": {
+        "summary": "Reset user password",
+        "description": "Password reset successfully",
+        "responses": {
+          "200": {
+            "description": "Password reset successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResetResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ResetRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "ResetResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "TempRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          }
+        }
+      },
+      "TempResponse": {
+        "type": "object",
+        "properties": {
+          "tempPassword": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

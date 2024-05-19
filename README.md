@@ -20,8 +20,28 @@ This project provides a step-by-step guide to create Amazon Bedrock Knowledge Ba
 This project demonstrates the creation of Amazon Bedrock Knowledge Bases and Agents, and their integration with a Pinecone Vector database using boto3 SDK. The project includes a generic Boto3 implementation of Amazon Bedrock Knowledgebases and Agents, as well as an OpenAPI schema with a reset function. These are provided as samples to help you get started.
 
 ## Prerequisites
-- **AWS Account**: You will need an AWS account with the necessary permissions to create and manage Bedrock Knowledge Bases, Agents, and associated resources.
+- **AWS Account**: You will need an AWS account with the necessary permissions to create and manage Bedrock Knowledge Bases, Agents, and associated resources. <a href="https://repost.aws/knowledge-center/create-and-activate-aws-account">Create one if required</a>
+- **Profile Setup**: <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html">Setup AWS Shared Credential File</a>
 - **Python 3**: The project uses Python 3, so you'll need to have it installed on your system.
+- **Python virtual env** (Optional):
+
+   To manually create a virtualenv on MacOS and Linux:
+
+   ```python3 -m venv .venv```
+
+   After the init process completes and the virtualenv is created, you can use the following step to activate your virtualenv.
+
+   ```source .venv/bin/activate```
+
+   If you are on a Windows platform, you would activate the virtualenv like this:
+
+   ```.venv\Scripts\activate.bat```
+
+   Once the virtualenv is activated, you can install the required dependencies.
+
+   ```pip install -r requirements.txt```
+
+
 - **Boto3**: The project uses the Boto3 library to interact with AWS services. You'll need to install it using `pip install boto3`.
 - **Pinecone**: You'll need to create a free Pinecone account and an index to store your vector data.
 - **Streamlit**: The project uses Streamlit to build the QA chatbot. You'll need to install it using `pip install streamlit`.
